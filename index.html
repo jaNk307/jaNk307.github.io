@@ -122,3 +122,55 @@
 </body>
 
 </html>
+
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>WebCat</title>
+ <!-- 右边的 -->
+<script src="https://l2dwidget.js.org/lib/L2Dwidget.min.js"></script>
+<script type="text/javascript">
+    L2Dwidget
+    .on('*', (name) => {
+    console.log('%c EVENT ' + '%c -> ' + name, 'background: #222; color: yellow', 'background: #fff; color: #000')
+    })
+    .init({
+        display: {
+            // 居左
+            "position": "right",
+            // 宽度
+            "width": 200,
+            // 高度
+            "height": 400,
+            // 距左右
+            "hOffset": 35,
+            // 距下
+            "vOffset": -20
+        },
+ 
+        mobile: {
+            // 移动端，false为关闭
+            "show": true,
+            "scale": 0.5
+        },
+ 
+        dialog: {
+        // 开启对话框，false为关闭
+            enable: true,
+            script: {
+                // 每空闲 10 秒钟，显示一条一言
+                'every idle 10s': '$hitokoto$',
+                // 当触摸到角色身体
+                'tap body': '爸爸！好爽好爽！嗯嗯啊啊啊！',
+                // 当触摸到角色头部
+                'tap face': '别摸了要高潮了！好爽啊'
+                // 当触摸到角色胸部
+                'tap chest': '好爽好爽，别停下来，嗯嗯嗯啊啊啊嗯！！！'
+            }
+        }
+    });
+</script>
+  </head>
+  <body>	
+	</body>
+</html>
